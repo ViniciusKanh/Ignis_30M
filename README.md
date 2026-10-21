@@ -1,11 +1,19 @@
 <p align="center">
-  <img src="docs/assets/ignis-logo.png" alt="Ignis — chama conectada por uma rede de nós" width="380">
+  <img src="docs/assets/ignis-logo-principal.png" alt="Logo Ignis: chama laranja com conexões neurais e o nome da família de modelos" width="300">
 </p>
 
 <h1 align="center">Ignis-30M</h1>
 
 <p align="center">
-  <strong>Modelo de linguagem autoregressivo, treinado do zero em PyTorch.</strong>
+  <strong>Um modelo próprio. Do primeiro token aos pesos treinados.</strong><br>
+  Modelo de linguagem autoregressivo em PyTorch, com prioridade para português e execução local.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-EXPERIMENTAL-EA580C?style=flat-square&amp;labelColor=202020" alt="Status: experimental">
+  <img src="https://img.shields.io/badge/PAR%C3%82METROS-30%2C4M-F59E0B?style=flat-square&amp;labelColor=202020" alt="30,4 milhões de parâmetros">
+  <img src="https://img.shields.io/badge/FRAMEWORK-PyTorch-EA580C?style=flat-square&amp;labelColor=202020" alt="Framework: PyTorch">
+  <img src="https://img.shields.io/badge/EXECU%C3%87%C3%83O-CPU%20%7C%20CUDA-F59E0B?style=flat-square&amp;labelColor=202020" alt="Execução: CPU ou CUDA">
 </p>
 
 <p align="center">
@@ -17,13 +25,9 @@
   <a href="#limitacoes">Limitações</a>
 </p>
 
-**Modelo de linguagem próprio, treinado do zero, com prioridade para português brasileiro e execução local.**
-
-![Status experimental](https://img.shields.io/badge/status-experimental-orange)
-![30.416.384 parâmetros](https://img.shields.io/badge/par%C3%A2metros-30.416.384-blueviolet)
-![PyTorch](https://img.shields.io/badge/framework-PyTorch-red)
-![CPU e CUDA](https://img.shields.io/badge/execu%C3%A7%C3%A3o-CPU%20%7C%20CUDA-blue)
-
+| Modelo | Objetivo de treinamento | Implementação | Escala |
+|:---|:---|:---|:---|
+| **Ignis-30M · Base** | Previsão do próximo token | Transformer decoder-only | **30.416.384 parâmetros** |
 
 > [!IMPORTANT]
 > **O Ignis possui pesos treinados em experimentos reais, mas ainda não gera texto coerente de forma confiável.** É um projeto de pesquisa e engenharia de modelos de linguagem, não um assistente pronto para produção. Redução de loss não comprova compreensão, factualidade ou capacidade conversacional.
@@ -32,7 +36,8 @@
 
 ---
 
-## Conteúdo
+<details>
+<summary><strong>Explorar a documentação</strong> — arquitetura, uso, treinamento e avaliação</summary>
 
 - [Propósito e aplicações](#proposito)
 - [Estado atual](#estado)
@@ -48,6 +53,10 @@
 - [Estrutura do projeto](#estrutura)
 - [Solução de problemas](#problemas)
 - [Autoria, licenciamento e evidências](#referencias)
+
+</details>
+
+---
 
 <a id="proposito"></a>
 ## Propósito e aplicações
