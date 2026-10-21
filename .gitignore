@@ -1,0 +1,38 @@
+# Ambiente virtual e caches
+.venv/
+.venv-cuda/
+.venv-*/
+/tmp_*/
+*.backup_*
+.pip-cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Dados e artefatos volumosos (Fase 2+)
+/data/
+/corpus_real/
+*.jsonl
+*.parquet
+*.npy
+
+# Checkpoints e modelos treinados
+/checkpoints/
+*.pt
+*.ckpt
+*.safetensors
+
+# Logs
+/logs/
+*.log
+
+# SO / editores
+.DS_Store
+.idea/
+.vscode/
+
+# Exceções explícitas: pequenos artefatos de demonstração autorizados
+!tests/fixtures/**

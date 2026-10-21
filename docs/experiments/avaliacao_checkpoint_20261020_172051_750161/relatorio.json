@@ -1,0 +1,140 @@
+{
+  "checkpoint": "checkpoints\\pilot-corpus-v1\\step200.pt",
+  "passo_local": 200,
+  "device": "cuda",
+  "torch": "2.14.1+cu126",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "teste_utilizado": false,
+  "pesos_atualizados": false,
+  "verificacao_splits": {
+    "status": "origem_nao_verificada",
+    "sha256_checkpoint": null,
+    "sha256_atual": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59"
+  },
+  "hashes": {
+    "checkpoints\\pilot-corpus-v1\\step200.pt": "9499591c77661688158617331e8444ac855f08ad6b0ec49615e9b097001fbd3e",
+    "configs\\ignis-30m.yaml": "a25ac7b621f80df4cd640dc46824a0c804a83c769e8a82c396198e6e0d2a20db",
+    "data\\piloto_corpus_v1\\tokenizer_naooficial.json": "60bada7e0b694ed8f86c8ffdc98dadef9afa3acf5fcc5f131b38ce2f217524f9",
+    "data\\piloto_corpus_v1\\splits.json": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.sequencias.npy": "301dc6532cbaa3f19a3f2a8c66c6cdf67767c0f7d760c85a23f458d972cdac98",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.mascaras.npy": "e3e17dc83a5ac5a377be2bc99968b1c72ff89bcc2aab54f119888dc89e9c1b77"
+  },
+  "amostras": [
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de um um um um o o o o a a a a a a a a a a de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a os a do os a mais mais do a na mais o que como, que o de uma a as em a de uma.\n\nA um de que é de de, o a a, uma da os o da o no como para o um no a o, com a de o a de uma",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " o uma uma uma uma uma uma uma a a a a a a a a a a a a de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a os a a os a suas mais um seu na mais os que como, que o se o a as em a de uma seu a dos a um de que para de de seu o a a uma uma da os o da o no as de um um no a o de.\n\n\nO de uma",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de um um um um um um o o o o o o o o o a a a de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a parte de 17,, o foi sua seu a mais o que como, que o se o a as em a de uma.\n\nA um de que é de de sua foi a a, uma uma os o da o no como de um um no a o, com a de o a de uma",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " um um um um um um um um um o o o o o o o o o o a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " ser a os \"se, em um sua seu a mais o que como, que o se uma a as em a de uma seu a dos de um de que para de de seu o a a uma uma da os o da o no as de um um no a o de.\n\n\nO de uma",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de um um um um um um de um de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a os a do os a suas mais do seu na mais os que como, que o se o a as em a de uma.\n\nA um de que é de de sua foi a a, uma uma os o da o no como de um um no a o, com a de o a de uma",
+      "tokens_gerados": 64
+    }
+  ],
+  "validacao": {
+    "loss": 6.992820456263814,
+    "perplexidade": 1088.7880286298496,
+    "tokens_alvo": 84265,
+    "lotes": 664
+  }
+}

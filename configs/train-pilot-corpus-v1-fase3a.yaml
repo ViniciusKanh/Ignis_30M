@@ -1,0 +1,38 @@
+# Fase nova: exige scripts/treinar_fase3.py para carregar os pesos anteriores.
+# Carregar este arquivo não autoriza treinamento real.
+modelo:
+  config: configs/ignis-30m.yaml
+dados:
+  manifesto: data/manifesto_expansao_revisado.jsonl
+  splits: data/piloto_corpus_v1/splits.json
+  tokenizer: data/piloto_corpus_v1/tokenizer_naooficial.json
+  dataset_base: data/piloto_corpus_v1/tokenizado
+  seq_len: 128
+otimizacao:
+  lr: 5.0e-5
+  lr_min: 5.0e-6
+  warmup_steps: 50
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  eps: 1.0e-8
+  grad_clip: 1.0
+lote:
+  microbatch_size: 1
+  grad_accum_steps: 32
+orcamento:
+  max_steps: 1000
+  tokens_alvo_hipotese: 4064000
+validacao_e_checkpoint:
+  eval_every: 100
+  eval_max_batches: null
+  checkpoint_every: 100
+  log_every: 10
+  paciencia_avaliacoes: 3
+execucao:
+  seed: 42
+  device: cuda
+  mixed_precision: "no"
+  out_dir: checkpoints/pilot-corpus-v1-fase3a-controle
+  parar_em_falha_numerica: true
+  parar_em_falha_de_memoria: true

@@ -1,0 +1,29 @@
+# Configuração do Ignis-30M
+# Hipótese de configuração inicial aprovada (Fase 0) — ver PROMPT_INICIAL_CLAUDE.md secao 2.
+# Contagem analítica esperada: 30.416.384 parâmetros treináveis (embeddings compartilhados, sem bias).
+
+modelo:
+  nome: "ignis-30m"
+  arquitetura: "decoder_only_transformer"
+  vocab_size: 16384
+  max_seq_len: 1024
+  n_layers: 7
+  d_model: 512
+  n_heads: 8
+  n_kv_heads: 4
+  head_dim: 64
+  intermediate_size: 1536
+  activation: "swiglu"
+  normalization: "rmsnorm"
+  norm_eps: 1.0e-5
+  positional_encoding: "rope"
+  rope_theta: 10000.0
+  attention: "grouped_query_attention"
+  tie_word_embeddings: true
+  bias: false
+  dropout: 0.0
+
+execucao:
+  seed: 42
+  device: "cpu"
+  dtype: "float32"

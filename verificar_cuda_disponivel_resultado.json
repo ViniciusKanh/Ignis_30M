@@ -1,0 +1,63 @@
+﻿{
+    "gerado_em_utc":  "2026-10-18T18:29:10.6442245Z",
+    "aviso":  "Este script e SOMENTE LEITURA: nenhuma instalacao, desinstalacao ou alteracao de ambiente foi realizada.",
+    "gpu_nvidia":  {
+                       "detectada":  true,
+                       "compute_capability":  "8.9",
+                       "driver_version":  "610.91"
+                   },
+    "nvidia_smi":  {
+                       "disponivel":  true,
+                       "saida_basica":  "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 610.91"
+                   },
+    "python_do_projeto":  {
+                              "caminho":  "E:\\Models\\Ignis\\.venv\\Scripts\\python.exe",
+                              "encontrado":  true,
+                              "versao":  "Python 3.13.13"
+                          },
+    "tags_cuda_testadas":  [
+                               {
+                                   "tag":  "cu118",
+                                   "index_url":  "https://download.pytorch.org/whl/cu118",
+                                   "consulta_bem_sucedida":  true,
+                                   "versoes_encontradas":  "Available versions: 2.7.1+cu118, 2.7.0+cu118, 2.6.0+cu118",
+                                   "detalhe":  null
+                               },
+                               {
+                                   "tag":  "cu121",
+                                   "index_url":  "https://download.pytorch.org/whl/cu121",
+                                   "consulta_bem_sucedida":  false,
+                                   "versoes_encontradas":  [
+
+                                                           ],
+                                   "detalhe":  "ERROR: No matching distribution found for torch"
+                               },
+                               {
+                                   "tag":  "cu124",
+                                   "index_url":  "https://download.pytorch.org/whl/cu124",
+                                   "consulta_bem_sucedida":  true,
+                                   "versoes_encontradas":  "Available versions: 2.6.0+cu124",
+                                   "detalhe":  null
+                               },
+                               {
+                                   "tag":  "cu126",
+                                   "index_url":  "https://download.pytorch.org/whl/cu126",
+                                   "consulta_bem_sucedida":  true,
+                                   "versoes_encontradas":  "Available versions: 2.14.1+cu126, 2.14.0+cu126, 2.13.0+cu126, 2.12.1+cu126, 2.12.0+cu126, 2.11.0+cu126, 2.10.0+cu126, 2.9.1+cu126, 2.9.0+cu126, 2.8.0+cu126, 2.7.1+cu126, 2.7.0+cu126, 2.6.0+cu126",
+                                   "detalhe":  null
+                               },
+                               {
+                                   "tag":  "cu128",
+                                   "index_url":  "https://download.pytorch.org/whl/cu128",
+                                   "consulta_bem_sucedida":  true,
+                                   "versoes_encontradas":  "Available versions: 2.11.0+cu128, 2.10.0+cu128, 2.9.1+cu128, 2.9.0+cu128, 2.8.0+cu128, 2.7.1+cu128, 2.7.0+cu128",
+                                   "detalhe":  null
+                               }
+                           ],
+    "recomendacao":  [
+                         "Tag(s) de build CUDA confirmada(s) como instalaveis neste momento: cu118, cu124, cu126, cu128.",
+                         "Compute capability detectada nesta GPU: 8.9.",
+                         "PROXIMO PASSO (requer autorizacao explicita separada): rode scripts\\preparar_venv_cuda.ps1 -Confirmar -IndexUrl https://download.pytorch.org/whl/\u003ctag escolhida\u003e -- esse script cria um .venv-cuda SEPARADO (nunca mexe no .venv atual) e so instala algo apos essa confirmacao explicita.",
+                         "NENHUMA instalacao foi executada por este script de descoberta."
+                     ]
+}

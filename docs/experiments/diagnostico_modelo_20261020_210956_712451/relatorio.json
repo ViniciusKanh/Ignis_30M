@@ -1,0 +1,936 @@
+{
+  "checkpoint": "checkpoints/pilot-corpus-v1-fase3a-controle/best.pt",
+  "passo_local": 1000,
+  "device": "cuda",
+  "torch": "2.14.1+cu126",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "teste_utilizado": false,
+  "pesos_atualizados": false,
+  "hashes": {
+    "checkpoints\\pilot-corpus-v1-fase3a-controle\\best.pt": "6a74b44292698d77683f705a85b491826bb76cd3a2005adbf950ec693f1c0e86",
+    "configs\\ignis-30m.yaml": "a25ac7b621f80df4cd640dc46824a0c804a83c769e8a82c396198e6e0d2a20db",
+    "data\\piloto_corpus_v1\\splits.json": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "data\\piloto_corpus_v1\\tokenizer_naooficial.json": "60bada7e0b694ed8f86c8ffdc98dadef9afa3acf5fcc5f131b38ce2f217524f9",
+    "data\\manifesto_expansao_revisado.jsonl": "73f68d4bfd36ada638e92d7de0b24f1494f64d8e1ed3f5c0c09354674587e036",
+    "data\\piloto_corpus_v1\\tokenizado_treino.sequencias.npy": "1d367ad166028d46344fd95e57bacc50010d5a8041e7389a811a39bf23d56e6a",
+    "data\\piloto_corpus_v1\\tokenizado_treino.mascaras.npy": "292e276b66040c84fca62e21047495c4d38581eb53fada1eee5e47e9b7086049",
+    "data\\piloto_corpus_v1\\tokenizado_treino.estatisticas.json": "cd0f25af19ea8725935bb626cbc51a61d363cd875b9163acd523066d0ac6a040",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.sequencias.npy": "301dc6532cbaa3f19a3f2a8c66c6cdf67767c0f7d760c85a23f458d972cdac98",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.mascaras.npy": "e3e17dc83a5ac5a377be2bc99968b1c72ff89bcc2aab54f119888dc89e9c1b77",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.estatisticas.json": "53de89910b222a9da09177217f7be8b7a5ca681c1453f192a2e55142dc2bd2fd"
+  },
+  "baseline": "Unigrama ajustado apenas nos alvos de treino, suavização aditiva alpha=1.",
+  "splits": {
+    "treino": {
+      "loss": 5.4717016201260265,
+      "perplexidade": 237.86460378368548,
+      "tokens_alvo": 1507040,
+      "sequencias": 11867,
+      "loss_unigrama_treino": 7.541488161220907
+    },
+    "validacao": {
+      "loss": 5.952062173416825,
+      "perplexidade": 384.54552152361555,
+      "tokens_alvo": 84265,
+      "sequencias": 664,
+      "loss_unigrama_treino": 7.635498388688494
+    }
+  },
+  "gap_loss_validacao_menos_treino": 0.4803605532907982,
+  "contexto": {
+    "n_alvos": 512,
+    "indices_sequencias": [
+      642,
+      100,
+      360,
+      457,
+      48,
+      442,
+      508,
+      75,
+      483,
+      332,
+      328,
+      81,
+      116,
+      167,
+      445,
+      451,
+      588,
+      44,
+      30,
+      617,
+      484,
+      233,
+      295,
+      494,
+      293,
+      168,
+      489,
+      72,
+      425,
+      292,
+      441,
+      47,
+      371,
+      29,
+      353,
+      243,
+      230,
+      433,
+      22,
+      177,
+      89,
+      591,
+      70,
+      162,
+      373,
+      530,
+      535,
+      133,
+      606,
+      368,
+      251,
+      564,
+      154,
+      112,
+      643,
+      298,
+      523,
+      419,
+      656,
+      59,
+      512,
+      187,
+      174,
+      223,
+      568,
+      64,
+      546,
+      219,
+      424,
+      148,
+      341,
+      49,
+      1,
+      106,
+      453,
+      80,
+      585,
+      628,
+      266,
+      410,
+      646,
+      286,
+      207,
+      86,
+      556,
+      369,
+      234,
+      231,
+      218,
+      9,
+      493,
+      198,
+      659,
+      342,
+      300,
+      84,
+      499,
+      582,
+      309,
+      479,
+      152,
+      7,
+      450,
+      258,
+      417,
+      426,
+      542,
+      406,
+      17,
+      211,
+      635,
+      189,
+      104,
+      634,
+      128,
+      662,
+      290,
+      11,
+      239,
+      267,
+      599,
+      229,
+      155,
+      449,
+      395,
+      200,
+      411,
+      415,
+      5,
+      392,
+      310,
+      126,
+      470,
+      203,
+      142,
+      96,
+      160,
+      409,
+      423,
+      271,
+      595,
+      285,
+      305,
+      115,
+      217,
+      171,
+      56,
+      485,
+      196,
+      256,
+      430,
+      569,
+      553,
+      511,
+      358,
+      136,
+      18,
+      52,
+      193,
+      274,
+      277,
+      145,
+      322,
+      610,
+      14,
+      209,
+      476,
+      413,
+      570,
+      492,
+      653,
+      323,
+      170,
+      20,
+      0,
+      236,
+      379,
+      87,
+      531,
+      164,
+      416,
+      615,
+      225,
+      313,
+      185,
+      195,
+      518,
+      421,
+      359,
+      596,
+      624,
+      545,
+      645,
+      533,
+      603,
+      94,
+      650,
+      540,
+      649,
+      505,
+      339,
+      590,
+      435,
+      351,
+      363,
+      487,
+      592,
+      418,
+      129,
+      26,
+      444,
+      465,
+      378,
+      235,
+      519,
+      35,
+      497,
+      118,
+      325,
+      269,
+      296,
+      221,
+      252,
+      354,
+      576,
+      324,
+      19,
+      608,
+      428,
+      34,
+      521,
+      370,
+      580,
+      562,
+      593,
+      638,
+      312,
+      25,
+      27,
+      350,
+      622,
+      311,
+      156,
+      120,
+      446,
+      16,
+      571,
+      343,
+      525,
+      559,
+      138,
+      563,
+      249,
+      495,
+      472,
+      633,
+      282,
+      69,
+      399,
+      226,
+      404,
+      510,
+      98,
+      375,
+      376,
+      173,
+      316,
+      414,
+      283,
+      381,
+      121,
+      654,
+      467,
+      420,
+      61,
+      163,
+      340,
+      598,
+      640,
+      206,
+      396,
+      190,
+      524,
+      238,
+      575,
+      597,
+      294,
+      204,
+      380,
+      275,
+      261,
+      601,
+      454,
+      149,
+      398,
+      62,
+      352,
+      491,
+      412,
+      346,
+      78,
+      507,
+      216,
+      460,
+      250,
+      272,
+      468,
+      532,
+      482,
+      554,
+      95,
+      397,
+      58,
+      403,
+      32,
+      526,
+      205,
+      41,
+      604,
+      40,
+      327,
+      619,
+      648,
+      60,
+      114,
+      572,
+      652,
+      469,
+      259,
+      166,
+      119,
+      623,
+      124,
+      589,
+      565,
+      101,
+      443,
+      481,
+      287,
+      566,
+      301,
+      632,
+      496,
+      93,
+      560,
+      391,
+      452,
+      315,
+      631,
+      641,
+      51,
+      583,
+      337,
+      436,
+      438,
+      561,
+      15,
+      578,
+      544,
+      625,
+      537,
+      657,
+      389,
+      281,
+      304,
+      141,
+      92,
+      600,
+      548,
+      176,
+      2,
+      550,
+      153,
+      394,
+      139,
+      618,
+      125,
+      215,
+      547,
+      146,
+      257,
+      108,
+      386,
+      85,
+      111,
+      210,
+      458,
+      159,
+      552,
+      401,
+      636,
+      255,
+      134,
+      105,
+      270,
+      614,
+      338,
+      77,
+      161,
+      348,
+      388,
+      488,
+      529,
+      140,
+      302,
+      514,
+      440,
+      12,
+      437,
+      422,
+      66,
+      462,
+      212,
+      555,
+      67,
+      655,
+      355,
+      241,
+      471,
+      390,
+      24,
+      107,
+      79,
+      268,
+      90,
+      179,
+      42,
+      63,
+      88,
+      407,
+      102,
+      245,
+      262,
+      169,
+      202,
+      558,
+      613,
+      326,
+      621,
+      242,
+      113,
+      97,
+      273,
+      522,
+      264,
+      587,
+      490,
+      71,
+      573,
+      278,
+      228,
+      400,
+      661,
+      362,
+      612,
+      345,
+      367,
+      374,
+      513,
+      382,
+      227,
+      68,
+      456,
+      184,
+      222,
+      253,
+      320,
+      54,
+      276,
+      429,
+      122,
+      335,
+      220,
+      474,
+      280,
+      502,
+      377,
+      150,
+      434,
+      538,
+      586,
+      131,
+      181,
+      477,
+      214,
+      224,
+      165,
+      137,
+      357,
+      76,
+      486,
+      366,
+      455,
+      123,
+      143,
+      509,
+      466,
+      528,
+      244,
+      658,
+      199,
+      246,
+      248,
+      23,
+      55,
+      333,
+      579,
+      605,
+      616,
+      385,
+      208,
+      279
+    ],
+    "seed": 42,
+    "loss_media_por_condicao": {
+      "original": 5.913698857582858,
+      "prefixo_embaralhado": 6.561934681621096,
+      "ultimo_token_apenas": 6.685810224740635
+    },
+    "delta_embaralhado_menos_original": 0.6482358240382382,
+    "delta_ultimo_token_menos_original": 0.7721113671577768,
+    "fracao_alvos_melhores_com_ordem_original": 0.685546875,
+    "metodo": "Um alvo por bloco completo de validação; prefixo permutado preserva último token, multiconjunto e comprimento.",
+    "limitacoes": "Uma amostra/seed; blocos não são documentos independentes. Último-token-apenas muda também o comprimento. Não é benchmark de compreensão."
+  },
+  "composicao": {
+    "documentos_treino": 1063,
+    "fontes": {
+      "wikipedia-pt": 1063
+    },
+    "indicadores_lexicais_documentos": {
+      "geografia_demografia": 123,
+      "sem_indicador": 588,
+      "artes_entretenimento": 146,
+      "computacao": 14,
+      "historia_politica": 203,
+      "esporte": 92,
+      "energia": 17,
+      "matematica": 8
+    },
+    "exemplos_ids_e_termos": {
+      "geografia_demografia": [
+        {
+          "id": "wikipedia-pt-1363263",
+          "termos": [
+            "cidade",
+            "condado",
+            "habitantes",
+            "localizada",
+            "população"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1588990",
+          "termos": [
+            "cidade",
+            "localizada"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1351916",
+          "termos": [
+            "cidade",
+            "condado",
+            "habitantes",
+            "localizada",
+            "população"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-2350760",
+          "termos": [
+            "cidade",
+            "habitantes"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-302925",
+          "termos": [
+            "localizada",
+            "município"
+          ]
+        }
+      ],
+      "artes_entretenimento": [
+        {
+          "id": "wikipedia-pt-3921176",
+          "termos": [
+            "banda",
+            "álbum"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-6202329",
+          "termos": [
+            "banda",
+            "filme",
+            "música",
+            "série",
+            "álbum"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-2002226",
+          "termos": [
+            "ator",
+            "banda",
+            "música"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-6506865",
+          "termos": [
+            "ator",
+            "série"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1269577",
+          "termos": [
+            "banda",
+            "filme",
+            "música",
+            "álbum"
+          ]
+        }
+      ],
+      "computacao": [
+        {
+          "id": "wikipedia-pt-2614618",
+          "termos": [
+            "algoritmo",
+            "computação",
+            "programação"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-7702613",
+          "termos": [
+            "programação",
+            "software"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-4188819",
+          "termos": [
+            "algoritmo",
+            "computador",
+            "software"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-3930509",
+          "termos": [
+            "computação",
+            "software"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-45405",
+          "termos": [
+            "computador",
+            "computação"
+          ]
+        }
+      ],
+      "historia_politica": [
+        {
+          "id": "wikipedia-pt-1744282",
+          "termos": [
+            "governo",
+            "guerra"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-4131714",
+          "termos": [
+            "exército",
+            "governo",
+            "guerra",
+            "presidente"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-2002226",
+          "termos": [
+            "império",
+            "presidente"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-7124393",
+          "termos": [
+            "exército",
+            "guerra"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-5911531",
+          "termos": [
+            "exército",
+            "presidente"
+          ]
+        }
+      ],
+      "esporte": [
+        {
+          "id": "wikipedia-pt-6423976",
+          "termos": [
+            "campeonato",
+            "clube",
+            "futebol",
+            "jogador",
+            "temporada"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1830496",
+          "termos": [
+            "campeonato",
+            "futebol"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-2118813",
+          "termos": [
+            "estádio",
+            "futebol"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1626144",
+          "termos": [
+            "clube",
+            "temporada"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1306572",
+          "termos": [
+            "jogador",
+            "temporada"
+          ]
+        }
+      ],
+      "energia": [
+        {
+          "id": "wikipedia-pt-6932181",
+          "termos": [
+            "combustível",
+            "eletricidade",
+            "elétrica",
+            "energia"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-6768960",
+          "termos": [
+            "combustível",
+            "eletricidade",
+            "energia"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1069891",
+          "termos": [
+            "combustível",
+            "energia"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-1978962",
+          "termos": [
+            "elétrica",
+            "energia"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-26118",
+          "termos": [
+            "elétrica",
+            "energia"
+          ]
+        }
+      ],
+      "matematica": [
+        {
+          "id": "wikipedia-pt-7811686",
+          "termos": [
+            "integral",
+            "matemática"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-4188819",
+          "termos": [
+            "equação",
+            "matemática",
+            "matriz",
+            "teorema"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-2783407",
+          "termos": [
+            "equação",
+            "matemática"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-7813912",
+          "termos": [
+            "matemática",
+            "teorema"
+          ]
+        },
+        {
+          "id": "wikipedia-pt-3154331",
+          "termos": [
+            "matemática",
+            "teorema"
+          ]
+        }
+      ]
+    },
+    "lexicos": {
+      "geografia_demografia": [
+        "cidade",
+        "condado",
+        "habitantes",
+        "localizada",
+        "município",
+        "população"
+      ],
+      "esporte": [
+        "campeonato",
+        "clube",
+        "estádio",
+        "futebol",
+        "jogador",
+        "temporada"
+      ],
+      "artes_entretenimento": [
+        "ator",
+        "banda",
+        "filme",
+        "música",
+        "série",
+        "álbum"
+      ],
+      "historia_politica": [
+        "exército",
+        "governo",
+        "guerra",
+        "império",
+        "presidente",
+        "rei"
+      ],
+      "matematica": [
+        "derivada",
+        "equação",
+        "integral",
+        "matemática",
+        "matriz",
+        "teorema"
+      ],
+      "computacao": [
+        "algoritmo",
+        "computador",
+        "computação",
+        "processador",
+        "programação",
+        "software"
+      ],
+      "energia": [
+        "combustível",
+        "eletricidade",
+        "elétrica",
+        "energia",
+        "fotovoltaica",
+        "solar"
+      ]
+    },
+    "metodo": "Pelo menos dois termos distintos por grupo; grupos sobrepostos. Não estima proporções temáticas verdadeiras.",
+    "hashes_fontes": {
+      "corpus_real\\wikipedia_pt\\shard_0000.jsonl": "3abf1b6d035a32ecbcb11c4ae580fd67d9367ffe78735449fcf3d982772df285",
+      "corpus_real\\wikipedia_pt\\shard_0001.jsonl": "8f74df04eba3e31cf5ec35432db1a367832ceae3af86c922aaae8337f4ccfdcd",
+      "corpus_real\\wikipedia_pt\\shard_0002.jsonl": "8ff8a401c9aa1e09e771a56bca6ad8a6d3abe2730979c1e9dd5c048b151d001c",
+      "corpus_real\\wikipedia_pt\\shard_0003.jsonl": "4842f24fd93b2659e8328b777e9539b37ed98a4a50110985cd961feeebb8bf81",
+      "corpus_real\\wikipedia_pt\\shard_0004.jsonl": "2b6ebee939e562f35c5a492ca46422be51657b7e4868f3351382239d6d723734",
+      "corpus_real\\wikipedia_pt\\shard_0005.jsonl": "928ee7ef3d0251b85085f6ad65bf679df0be75e4b116b8c0f003c5d33a635c57"
+    }
+  }
+}

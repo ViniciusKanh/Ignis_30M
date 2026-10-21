@@ -1,0 +1,199 @@
+{
+  "teste_analisado": false,
+  "corpus_alterado": false,
+  "metodo": "Títulos isolados. Cauda desde o primeiro título: limite candidato, não remoção aprovada.",
+  "hashes": {
+    "data\\manifesto_expansao_revisado.jsonl": "73f68d4bfd36ada638e92d7de0b24f1494f64d8e1ed3f5c0c09354674587e036",
+    "data\\piloto_corpus_v1\\splits.json": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "data\\piloto_corpus_v1\\tokenizer_naooficial.json": "60bada7e0b694ed8f86c8ffdc98dadef9afa3acf5fcc5f131b38ce2f217524f9",
+    "corpus_real\\wikipedia_pt\\shard_0000.jsonl": "3abf1b6d035a32ecbcb11c4ae580fd67d9367ffe78735449fcf3d982772df285",
+    "corpus_real\\wikipedia_pt\\shard_0001.jsonl": "8f74df04eba3e31cf5ec35432db1a367832ceae3af86c922aaae8337f4ccfdcd",
+    "corpus_real\\wikipedia_pt\\shard_0002.jsonl": "8ff8a401c9aa1e09e771a56bca6ad8a6d3abe2730979c1e9dd5c048b151d001c",
+    "corpus_real\\wikipedia_pt\\shard_0003.jsonl": "4842f24fd93b2659e8328b777e9539b37ed98a4a50110985cd961feeebb8bf81",
+    "corpus_real\\wikipedia_pt\\shard_0004.jsonl": "2b6ebee939e562f35c5a492ca46422be51657b7e4868f3351382239d6d723734",
+    "corpus_real\\wikipedia_pt\\shard_0005.jsonl": "928ee7ef3d0251b85085f6ad65bf679df0be75e4b116b8c0f003c5d33a635c57",
+    "data\\piloto_corpus_v1\\tokenizado_treino.sequencias.npy": "1d367ad166028d46344fd95e57bacc50010d5a8041e7389a811a39bf23d56e6a",
+    "data\\piloto_corpus_v1\\tokenizado_treino.mascaras.npy": "292e276b66040c84fca62e21047495c4d38581eb53fada1eee5e47e9b7086049",
+    "data\\piloto_corpus_v1\\tokenizado_treino.estatisticas.json": "cd0f25af19ea8725935bb626cbc51a61d363cd875b9163acd523066d0ac6a040",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.sequencias.npy": "301dc6532cbaa3f19a3f2a8c66c6cdf67767c0f7d760c85a23f458d972cdac98",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.mascaras.npy": "e3e17dc83a5ac5a377be2bc99968b1c72ff89bcc2aab54f119888dc89e9c1b77",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.estatisticas.json": "53de89910b222a9da09177217f7be8b7a5ca681c1453f192a2e55142dc2bd2fd"
+  },
+  "splits": {
+    "treino": {
+      "documentos": 1063,
+      "tokens_com_especiais": 1518907,
+      "caracteres": 5915031,
+      "documentos_com_titulos": 1026,
+      "percentual_documentos_com_titulos": 96.51928504233302,
+      "documentos_com_titulo_repetido": 10,
+      "ocorrencias_por_titulo": {
+        "referências": 937,
+        "bibliografia": 158,
+        "ver também": 270,
+        "ligações externas": 542,
+        "notas": 91
+      },
+      "caracteres_linhas_titulos": 26197,
+      "caracteres_cauda_candidata": 269121,
+      "tokens_cauda_candidata_sem_especiais": 84364,
+      "percentual_tokens_cauda_aproximado": 5.554257107248831,
+      "nota_tokens": "Cauda codificada separadamente; fronteira BPE pode diferir. Inclui conteúdo legítimo.",
+      "exemplos_ids": [
+        {
+          "documento_id": "wikipedia-pt-101196",
+          "titulos": {
+            "referências": 1,
+            "bibliografia": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1039787",
+          "titulos": {
+            "ver também": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1044973",
+          "titulos": {
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-104606",
+          "titulos": {
+            "ver também": 1,
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1058913",
+          "titulos": {
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1069891",
+          "titulos": {
+            "ver também": 1,
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1070538",
+          "titulos": {
+            "bibliografia": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1076439",
+          "titulos": {
+            "ver também": 1,
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-10932",
+          "titulos": {
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1112530",
+          "titulos": {
+            "referências": 1
+          }
+        }
+      ]
+    },
+    "validacao": {
+      "documentos": 71,
+      "tokens_com_especiais": 84929,
+      "caracteres": 324364,
+      "documentos_com_titulos": 66,
+      "percentual_documentos_com_titulos": 92.95774647887323,
+      "documentos_com_titulo_repetido": 0,
+      "ocorrencias_por_titulo": {
+        "ligações externas": 35,
+        "referências": 57,
+        "ver também": 10,
+        "bibliografia": 9,
+        "notas": 3
+      },
+      "caracteres_linhas_titulos": 1529,
+      "caracteres_cauda_candidata": 13794,
+      "tokens_cauda_candidata_sem_especiais": 4589,
+      "percentual_tokens_cauda_aproximado": 5.40333690494413,
+      "nota_tokens": "Cauda codificada separadamente; fronteira BPE pode diferir. Inclui conteúdo legítimo.",
+      "exemplos_ids": [
+        {
+          "documento_id": "wikipedia-pt-1137868",
+          "titulos": {
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1159366",
+          "titulos": {
+            "referências": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1172784",
+          "titulos": {
+            "referências": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1301144",
+          "titulos": {
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1331524",
+          "titulos": {
+            "referências": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-14320",
+          "titulos": {
+            "ver também": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-14872",
+          "titulos": {
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-150835",
+          "titulos": {
+            "referências": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-1559946",
+          "titulos": {
+            "bibliografia": 1,
+            "ligações externas": 1
+          }
+        },
+        {
+          "documento_id": "wikipedia-pt-158883",
+          "titulos": {
+            "referências": 1,
+            "ligações externas": 1
+          }
+        }
+      ]
+    }
+  }
+}

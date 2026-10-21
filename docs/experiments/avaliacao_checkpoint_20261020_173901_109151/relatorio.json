@@ -1,0 +1,140 @@
+{
+  "checkpoint": "checkpoints/pilot-corpus-v1-fase2/step1000.pt",
+  "passo_local": 1000,
+  "device": "cuda",
+  "torch": "2.14.1+cu126",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "teste_utilizado": false,
+  "pesos_atualizados": false,
+  "verificacao_splits": {
+    "status": "hash_compativel",
+    "sha256_checkpoint": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "sha256_atual": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59"
+  },
+  "hashes": {
+    "checkpoints\\pilot-corpus-v1-fase2\\step1000.pt": "60dbb12aa8727cb1cafbd48cb5c4afdc44886b8f7b7438325acb6ffbccbe566f",
+    "configs\\ignis-30m.yaml": "a25ac7b621f80df4cd640dc46824a0c804a83c769e8a82c396198e6e0d2a20db",
+    "data\\piloto_corpus_v1\\tokenizer_naooficial.json": "60bada7e0b694ed8f86c8ffdc98dadef9afa3acf5fcc5f131b38ce2f217524f9",
+    "data\\piloto_corpus_v1\\splits.json": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.sequencias.npy": "301dc6532cbaa3f19a3f2a8c66c6cdf67767c0f7d760c85a23f458d972cdac98",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.mascaras.npy": "e3e17dc83a5ac5a377be2bc99968b1c72ff89bcc2aab54f119888dc89e9c1b77"
+  },
+  "amostras": [
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de São Paulo, que foi um dos dos anos de São Paulo, que foi o primeiro ano de Janeiro, que foi o primeiro ano de Janeiro.\n\nReferências\n\nLigações externas\n\nLigações externas\n\nLigações externas\n«Página oficial»",
+      "tokens_gerados": 51
+    },
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a primeira temporada do primeiro, mas foi um período de dois anos, como que não está de uma equipe em uma região de uma primeira vez como a um dos primeiros ano.\nO filme é a família da cidade, o que o segundo é o filme, no dia S, com o tempo que a segunda dos",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " a cidade de Janeiro, e a primeira vez que a sua vez foi a primeira vez.\n\nReferências\n\nLigações externas\n\nLigações externas\n\nLigações externas\n«A primeira de um dos Estados Unidos»",
+      "tokens_gerados": 44
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " ser a primeira.\n\nA época foi um período na vida de que o que não está de uma vez em uma região de uma primeira vez como a um dos que é de um grande de parte do Rio de março.\n\nA primeira vez de um grupo de dois anos, foi o tempo que a segunda vez",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de um grupo de São Paulo, que foi um dos dos anos de São Paulo, que foi o primeiro ano de Janeiro, o que foi o primeiro ano de Janeiro.\n\nReferências\n\nLigações externas\n«Página oficial»",
+      "tokens_gerados": 47
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " de sua parte, a sua música para a sua história na vida, que ela, não está se lançado em um dos número de uma primeira vez como a um dos que é de um seu filme.\n\nReferências\n\nLigações externas\n\nBibliografia\n\nCavy (17–17)\nB. S",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " um dos Estados Unidos e o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o que o",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " ser a parte de um dos Estados Unidos e um ano de fontes de julho.\n\nCalal\nO grupo de 2015, o qual se é um dos vezes de forma de seu filme, a família de uma obra de um dos maiores bicu, que foi o seu exército mais de 3.000 anos",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " em 18 de outubro de 2019, em 18 de março de 2019, em 18 de março de 2019, foi lançado em 18 de março de 2019.\n\nReferências\n\nLigações externas\n«Página oficial»",
+      "tokens_gerados": 43
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " em julho de 2009, quando a família era um período de um mesmo que ela, não está se lançado em um dos seus anos, onde a segunda de um dos que é mais de seu filme, como uma forma de três.\nA versão é o filme da cidade, o seu episódio foi a 3.000 anos",
+      "tokens_gerados": 64
+    }
+  ],
+  "validacao": {
+    "loss": 6.132591157108642,
+    "perplexidade": 460.6281756357188,
+    "tokens_alvo": 84265,
+    "lotes": 664
+  }
+}

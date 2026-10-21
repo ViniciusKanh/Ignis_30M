@@ -1,0 +1,81 @@
+# Piloto experimental de pre-treinamento do Ignis-30M (Fase 3).
+#
+# ATENCAO - LEIA ANTES DE EXECUTAR:
+#   1. Nenhum valor abaixo (lr, warmup, lote efetivo, orcamento de tokens)
+#      foi validado empiricamente. Sao HIPOTESES iniciais razoaveis para um
+#      piloto CURTO, documentadas assim de proposito - nunca cite nenhum
+#      destes numeros como "otimo" ou "a configuracao final do Ignis-30M".
+#   2. Este arquivo descreve um piloto; ele NAO autoriza, por si so, iniciar
+#      um treinamento prolongado. Ver docs/plano-corpus-piloto.md para o
+#      procedimento de selecao do corpus real e a skill ignis-llm-engineer
+#      para a regra de autorizacao explicita.
+#   3. "modelo.config" referencia a arquitetura oficial do Ignis-30M
+#      (configs/ignis-30m.yaml) - este arquivo NUNCA deve duplicar nem
+#      sobrescrever hiperparametros arquiteturais (vocab_size, n_layers,
+#      d_model, etc.). Ver ignis.config.PilotoConfig.validar_contexto_contra_modelo.
+#   4. "dados.seq_len" e o comprimento de bloco do PILOTO (128), nao o
+#      max_seq_len do modelo (1024). O contexto efetivo de treinamento e
+#      seq_len - 1 = 127 tokens (ver ignis.training.dataloader), bem abaixo
+#      do limite arquitetural do modelo - isto NAO altera a arquitetura.
+
+modelo:
+  config: "configs/ignis-30m.yaml"
+
+dados:
+  # Caminhos produzidos pelo pipeline da Fase 2 (ignis.cli). Ate que o corpus
+  # piloto real seja selecionado e validado (ver docs/plano-corpus-piloto.md),
+  # estes arquivos devem ser gerados a partir do corpus sintetico de
+  # desenvolvimento (scripts/gerar_corpus_sintetico.py) - nunca apontar aqui
+  # para um corpus real ainda nao avaliado/licenciado.
+  manifesto: "data/manifesto.jsonl"
+  splits: "data/splits.json"
+  tokenizer: "data/tokenizer.json"
+  dataset_base: "data/tokenizado"
+  seq_len: 128
+
+otimizacao:
+  lr: 3.0e-4
+  lr_min: 3.0e-5
+  warmup_steps: 50
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  eps: 1.0e-8
+  grad_clip: 1.0
+
+lote:
+  microbatch_size: 1
+  grad_accum_steps: 32
+  # lote efetivo = microbatch_size * grad_accum_steps = 32 sequencias de
+  # 127 tokens de contexto efetivo cada - documentar o valor REALIZADO
+  # junto dos resultados do piloto, nao assumir que 32 e definitivo.
+
+orcamento:
+  max_steps: 200
+  # hipotese de planejamento: max_steps * lote_efetivo * (seq_len - 1)
+  # = 200 * 32 * 127 = 812.800 tokens de treino processados (contando
+  # repeticoes, se o corpus piloto for menor que isso). NAO e uma meta de
+  # qualidade validada - apenas uma estimativa de escala do piloto.
+  tokens_alvo_hipotese: 812800
+
+validacao_e_checkpoint:
+  eval_every: 20
+  eval_max_batches: 10
+  checkpoint_every: 20
+  log_every: 5
+  paciencia_avaliacoes: 5
+
+execucao:
+  seed: 42
+  device: "cpu"
+  out_dir: "checkpoints/pilot-30m"
+  parar_em_falha_numerica: true
+
+smoke_test:
+  # Execucao reduzida (modelo pequeno + corpus sintetico, poucas iteracoes)
+  # para verificar mecanicamente atualizacao real de parametros e retomada
+  # de checkpoint - ver scripts/smoke_training.py. NAO le este arquivo
+  # inteiro (usa sua propria config reduzida embutida), apenas documenta
+  # aqui o numero de passos padrao para referencia.
+  habilitado: true
+  max_steps: 10

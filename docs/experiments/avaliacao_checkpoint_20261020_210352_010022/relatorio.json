@@ -1,0 +1,140 @@
+{
+  "checkpoint": "checkpoints\\pilot-corpus-v1-fase3a-controle\\best.pt",
+  "passo_local": 1000,
+  "device": "cuda",
+  "torch": "2.14.1+cu126",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "teste_utilizado": false,
+  "pesos_atualizados": false,
+  "verificacao_splits": {
+    "status": "hash_compativel",
+    "sha256_checkpoint": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "sha256_atual": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59"
+  },
+  "hashes": {
+    "checkpoints\\pilot-corpus-v1-fase3a-controle\\best.pt": "6a74b44292698d77683f705a85b491826bb76cd3a2005adbf950ec693f1c0e86",
+    "configs\\ignis-30m.yaml": "a25ac7b621f80df4cd640dc46824a0c804a83c769e8a82c396198e6e0d2a20db",
+    "data\\piloto_corpus_v1\\tokenizer_naooficial.json": "60bada7e0b694ed8f86c8ffdc98dadef9afa3acf5fcc5f131b38ce2f217524f9",
+    "data\\piloto_corpus_v1\\splits.json": "b83af90582995d37a225ffa35f2d52f975ce03b12078b4db2106df8716cdfc59",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.sequencias.npy": "301dc6532cbaa3f19a3f2a8c66c6cdf67767c0f7d760c85a23f458d972cdac98",
+    "data\\piloto_corpus_v1\\tokenizado_validacao.mascaras.npy": "e3e17dc83a5ac5a377be2bc99968b1c72ff89bcc2aab54f119888dc89e9c1b77"
+  },
+  "amostras": [
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de futebol, que é uma das das primeiras vezes mais de uma vez de uma vez, que é uma das vezes mais de uma vez de um dos anos, que é uma das vezes mais de um dos anos, que é uma das mais de um dos anos, que é uma das mais de um dos anos, que",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "O Brasil é um país",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a parte do século. A partir do Norte é a mais de 1.ª Divisão Panzer de 16.000 m.\nNo início de 2019, a região foi a 1.ª Divisão Panzer, com uma espécie de cerca de 2ª Princesa.\n\nReferências\n\nBibliografia\n\nBely, S",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " a cidade de Janeiro, e a primeira vez foi a primeira vez que a primeira vez foi a primeira vez que a primeira vez foi a primeira vez que a primeira vez foi a primeira vez, mas a primeira vez, a primeira vez que a primeira vez foi a primeira vez, mas a primeira vez, a primeira vez que",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A energia solar pode ser utilizada para",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a produção de um novo sistema de guerra, como a vida de que as características da igreja de energia pode ser em um grupo que é a forma de um dos soscico, o que é uma forma de uma história da região, como o que foi conhecido por um único.\n\nFyicio",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " de um grupo de futebol, é uma das das suas vezes mais tarde, e a sua primeira vez é uma das suas vezes mais de uma vez.\n\nReferências\n\nLigações externas\n«Página oficial» (em inglês)",
+      "tokens_gerados": 47
+    },
+    {
+      "prompt": "Na matemática, uma função",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " de sua parte, do primeiro sistema de guerra, a história é uma das mais que não está de uma única temporada em um grupo, onde a maioria de um dos primeiros meses.\nO filme é a família da cidade, o Estado do Estado, o filme foi conhecido por seu nome.\n\nHistória\n\nA",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " um dos principais mais de uma vez de um dos anos de um dos anos de um dos anos de um dos anos, o que é o que o que é o que o que é o que é o que é o que o que é o que é o que é o que é o que o que é o que",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "Um algoritmo é uma sequência de",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " que a produção de um novo sistema de guerra é uma história de uma vez.\n\nCalquitos\n\nO grupo é uma das pessoas de um dos primeiros meses de vez, o que era uma forma de três.\nA versão é o filme da produção é o para a área de um jogo de uma",
+      "tokens_gerados": 64
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "greedy",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.0
+      },
+      "continuacao": " em 18 de outubro de 2019, em 18 de junho de 2019, em 18 de junho de 2019, foi lançado em 18 de junho de 2019.\n\nReferências\n\nLigações externas\n\nLigações externas\n\n«Página oficial»",
+      "tokens_gerados": 48
+    },
+    {
+      "prompt": "A cidade foi fundada",
+      "modo": "amostragem",
+      "seed": 42,
+      "parametros": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "continuacao": " em julho de 2009, quando a estreia foi um período na época de Nova Iorque, no final de 2010. Foi em 4 de julho de 2008, no ano seguinte, no entanto, na primeira vez como grupo de uma vitória.\n\nBiografia\nNo ano de junho, o concurso foi o título de 2016, no",
+      "tokens_gerados": 64
+    }
+  ],
+  "validacao": {
+    "loss": 5.952062141908733,
+    "perplexidade": 384.5455094073203,
+    "tokens_alvo": 84265,
+    "lotes": 664
+  }
+}

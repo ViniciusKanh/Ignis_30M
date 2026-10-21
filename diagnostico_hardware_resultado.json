@@ -1,0 +1,44 @@
+﻿{
+    "gerado_em_utc":  "2026-10-18T17:42:41.5020249Z",
+    "cpu":  {
+                "nome":  "Intel(R) Core(TM) Ultra 7 155H",
+                "nucleos_fisicos":  16,
+                "processadores_logicos":  22,
+                "velocidade_max_mhz":  3800
+            },
+    "ram":  {
+                "total_gb":  31.51,
+                "livre_gb_no_momento":  12.11
+            },
+    "gpus_detectadas_pelo_windows":  [
+                                         {
+                                             "nome":  "NVIDIA GeForce RTX 4050 Laptop GPU",
+                                             "vram_gb_relatada_pelo_driver":  4,
+                                             "versao_driver":  "32.0.16.1091",
+                                             "status":  "OK"
+                                         },
+                                         {
+                                             "nome":  "Intel(R) Arc(TM) Graphics",
+                                             "vram_gb_relatada_pelo_driver":  2,
+                                             "versao_driver":  "32.0.101.8424",
+                                             "status":  "OK"
+                                         }
+                                     ],
+    "nvidia_smi":  {
+                       "disponivel":  true,
+                       "saida_bruta":  "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 5923 MiB, 610.91, 8.9"
+                   },
+    "torch":  {
+                  "encontrado":  true,
+                  "versao":  "2.14.1+cpu",
+                  "cuda_disponivel":  false,
+                  "cuda_versao_compilada":  null,
+                  "nome_gpu_torch":  null,
+                  "capacidade_computo":  null
+              },
+    "recomendacao":  [
+                         "Uma GPU NVIDIA foi detectada pelo Windows e/ou nvidia-smi, mas o torch instalado neste projeto e uma build CPU-only (ou torch.cuda.is_available() retornou False).",
+                         "Para habilitar aceleracao de GPU seria necessario REINSTALAR o torch com uma build CUDA compativel com o driver detectado (ex.: pip install torch --index-url https://download.pytorch.org/whl/cuXXX, onde XXX depende da versao do driver/CUDA Toolkit).",
+                         "ISTO NAO FOI EXECUTADO. A politica do projeto (skill ignis-llm-engineer) exige autorizacao explicita antes de qualquer instalacao global ou substituicao do ambiente atual. Qualquer reinstalacao do torch deve ser proposta e aprovada separadamente, citando a versao exata de CUDA/driver compativel encontrada acima."
+                     ]
+}

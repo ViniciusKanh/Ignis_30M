@@ -1,0 +1,37 @@
+modelo:
+  config: configs/ignis-30m.yaml
+dados:
+  manifesto: data/manifesto_expansao_revisado.jsonl
+  splits: data/piloto_corpus_v1/splits.json
+  tokenizer: data/piloto_corpus_v1/tokenizer_naooficial.json
+  dataset_base: data/piloto_corpus_v1/tokenizado
+  seq_len: 128
+otimizacao:
+  lr: 0.0001
+  lr_min: 1.0e-05
+  warmup_steps: 50
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  eps: 1.0e-08
+  grad_clip: 1.0
+lote:
+  microbatch_size: 1
+  grad_accum_steps: 32
+orcamento:
+  max_steps: 1000
+  tokens_alvo_hipotese: 4064000
+validacao_e_checkpoint:
+  eval_every: 100
+  eval_max_batches: 664
+  checkpoint_every: 100
+  log_every: 10
+  paciencia_avaliacoes: 5
+execucao:
+  seed: 42
+  device: cuda
+  out_dir: checkpoints/pilot-corpus-v1-fase2
+  parar_em_falha_numerica: true
+smoke_test:
+  habilitado: true
+  max_steps: 10

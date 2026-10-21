@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ignis"
+version = "0.1.0"
+description = "Ignis: familia independente de Small Language Models (SLMs) treinados do zero, com foco em portugues brasileiro e inferencia local/offline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+    { name = "Vinicius Santos", email = "vinicius.souza@penso.com.br" },
+]
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "tokenizers>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "psutil>=5.9",
+]
+# Opcional: exportação de pesos em Safetensors ao salvar checkpoints
+# (src/ignis/training/checkpoint.py). Nunca obrigatório — se ausente, o
+# checkpoint .pt principal (modelo + otimizador + RNG) continua funcionando
+# normalmente, só a exportação extra em .safetensors é pulada.
+training = [
+    "safetensors>=0.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ignis*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
